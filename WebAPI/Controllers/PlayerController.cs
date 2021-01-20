@@ -52,7 +52,7 @@ namespace WebAPI.Controllers
         }
         
         [HttpGet]
-        [Route("score/{id}", Name = "GetPlayerScoresById")]
+        [Route("score/{id}", Name = "GetPlayerScoresById")] //Should have been ({id}/score)
         public async Task<IActionResult> GetPlayerScoresById(int id)
         {
             var result = await _playerService.GetPlayerScores(id); 
